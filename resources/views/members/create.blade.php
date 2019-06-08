@@ -38,6 +38,15 @@
                             <ul id="myTabedu1" class="tab-review-design">
                                 <li class="active"><a href="#description">Add Member</a></li>
                             </ul>
+                            @if($errors->any())
+                            <div class="alert alert-danger">
+                              <ul>
+                                  @foreach($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                  @endforeach
+                              </ul>
+                            </div>
+                            @endif
                             <div id="myTabContent" class="tab-content custom-product-edit">
                                 <div class="product-tab-list tab-pane fade active in" id="description">
                                     <div class="row">
@@ -48,24 +57,24 @@
                                                     <div class="row">
                                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                             <div class="form-group">
-                                                                <input name="firstname" type="text" class="form-control" placeholder="Firstname">
+                                                                <input name="firstname" type="text" class="form-control" placeholder="Firstname" value="{{ old('firstname') }}">
                                                             </div>
                                                             <div class="form-group">
-                                                                <input name="lastname" type="text" class="form-control" placeholder="Lastname">
+                                                                <input name="lastname" type="text" class="form-control" placeholder="Lastname" value="{{old('lastname')}}">
                                                             </div>
                                                             <div class="form-group">
-                                                                <input name="email" type="email" class="form-control" placeholder="Email">
+                                                                <input name="email" type="email" class="form-control" placeholder="Email" value="{{old('email')}}">
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                             <div class="form-group">
-                                                                <input name="phonenumber" type="text" class="form-control" placeholder="Phonenumber">
+                                                                <input name="phonenumber" type="text" class="form-control" placeholder="Phonenumber" value="{{old('phonenumber')}}">
                                                             </div>
                                                             <div class="form-group">
-                                                                <input name="gender" type="text" class="form-control" placeholder="Gender">
+                                                                <input name="gender" type="text" class="form-control" placeholder="Gender" value="{{old('gender')}}">
                                                             </div>
                                                             <div class="form-group">
-                                                                <input name="id_no" type="text" class="form-control" placeholder="ID No">
+                                                                <input name="id_no" type="text" class="form-control" placeholder="ID No" value="{{old('id_no')}}">
                                                             </div>
                                                         </div>
                                                     </div>

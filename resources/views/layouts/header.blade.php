@@ -15,6 +15,7 @@
     <!-- Bootstrap CSS
 		============================================ -->
     <link rel="stylesheet" href="{{ asset('kili_css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{asset('export_css/datatables.min.css')}}">
     <!-- Bootstrap CSS
 		============================================ -->
     <link rel="stylesheet" href="{{ asset('kili_css/font-awesome.min.css') }}">
@@ -61,6 +62,9 @@
     <!-- modernizr JS
 		============================================ -->
     <script src="{{ asset('kili_js/vendor/modernizr-2.8.3.min.js') }}"></script>
+
+    <link rel="stylesheet" ref="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet"  href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css">
 </head>
 
 <body>
@@ -167,6 +171,7 @@
                     </div>
                 </div>
             </div>
+            @include('sweetalert::alert')
             @yield('content')
             <div class="footer-copyright-area">
             <div class="container-fluid">
@@ -180,7 +185,7 @@
             </div>
         </div>
     </div>
-
+  
     <!-- jquery
 		============================================ -->
     <script src="{{ asset('kili_js/vendor/jquery-1.12.4.min.js') }}"></script>
@@ -190,6 +195,7 @@
     <!-- wow JS
 		============================================ -->
     <script src="{{ asset('kili_js/wow.min.js') }}"></script>
+    <script src="{{ asset('export_js/datatables.min.js') }}"></script>
     <!-- price-slider JS
 		============================================ -->
     <script src="{{ asset('kili_js/jquery-price-slider.js') }}"></script>
@@ -242,6 +248,12 @@
     <!-- tawk chat JS
 		============================================ -->
     <script src="{{ asset('kili_js/tawk-chat.js') }}"></script>
+    <script src="//code.jquery.com/jquery-1.12.3.js"></script>
+
+    <script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+
+    
 </body>
 
 </html>
