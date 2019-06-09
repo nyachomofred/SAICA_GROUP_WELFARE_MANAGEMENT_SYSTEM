@@ -27,6 +27,9 @@ Route::prefix('admin')->group(function(){
     Route::get('/members','MemberController@index')->name('member.index');
     Route::get('/members/create','MemberController@showForm')->name('member.show.form');
     Route::post('/members/create','MemberController@create')->name('member.create');
+    Route::get('/members/view/{id}','MemberController@view')->name('member.view');
+    Route::get('/members/user','MemberController@userData')->name('member.user');
+    Route::get('/members/user/api','MemberController@dataUser')->name('member.userapi');
 });
 
 //route for members

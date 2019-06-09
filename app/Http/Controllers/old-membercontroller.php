@@ -9,7 +9,6 @@ use RealRashid\SweetAlert\Facades\Alert;
 use Yajra\DataTables\DataTables;
 
 use App\Member;
-use DB;
 
 class MemberController extends Controller
 {
@@ -53,10 +52,9 @@ class MemberController extends Controller
       
     }
 
-    public function view($id)
+    public function view()
     {
-     $contact=DB::table('members')->where('id',$id)->first();
-      return view('members.view')->With('contact',$contact);
+
     }
 
     public function update()
@@ -71,21 +69,6 @@ class MemberController extends Controller
 
     public function userData()
     {
-        return view('members.user');
-       
-    }
-    
-    public function dataUser()
-    {
-     
-        $users = Member::select(['id', 'firstname', 'lastname', 'gender', 'created_at', 'updated_at']);
-
-        return Datatables::of($users)
-            ->addColumn('action', function ($user) {
-                return '<a href="#edit-'.$user->id.'" class="btn btn-xs btn-info"><i class="glyphicon glyphicon-edit"></i> Edit</a>';
-            })
-            ->editColumn('id', 'ID: {{$id}}')
-            ->removeColumn('gender')
-            ->make(true);
+        
     }
 }

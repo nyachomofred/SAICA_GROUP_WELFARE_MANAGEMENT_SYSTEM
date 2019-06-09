@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Dashboard V.1 | Kiaalap - Kiaalap Admin Template</title>
+    <title>Walfare Group Mnagement System</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
@@ -59,12 +59,11 @@
     <!-- responsive CSS
 		============================================ -->
     <link rel="stylesheet" href="{{ asset('kili_css/responsive.css') }}">
+    <link rel="stylesheet" type="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+
     <!-- modernizr JS
 		============================================ -->
     <script src="{{ asset('kili_js/vendor/modernizr-2.8.3.min.js') }}"></script>
-
-    <link rel="stylesheet" ref="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet"  href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css">
 </head>
 
 <body>
@@ -195,7 +194,6 @@
     <!-- wow JS
 		============================================ -->
     <script src="{{ asset('kili_js/wow.min.js') }}"></script>
-    <script src="{{ asset('export_js/datatables.min.js') }}"></script>
     <!-- price-slider JS
 		============================================ -->
     <script src="{{ asset('kili_js/jquery-price-slider.js') }}"></script>
@@ -248,12 +246,27 @@
     <!-- tawk chat JS
 		============================================ -->
     <script src="{{ asset('kili_js/tawk-chat.js') }}"></script>
-    <script src="//code.jquery.com/jquery-1.12.3.js"></script>
 
-    <script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+    <!-- mCustomScrollbar JS
+		============================================ -->
+    <script src="{{ asset('kili_js/scrollbar/jquery.mCustomScrollbar.concat.min.js')}}"></script>
+    <script src="{{ asset('kili_js/scrollbar/mCustomScrollbar-active.js')}}"></script>
 
-    
+    <!-- metisMenu JS
+		============================================ -->
+    <script src="{{ asset('kili_js/metisMenu/metisMenu.min.js')}}"></script>
+    <script src="{{ asset('kili_js/metisMenu/metisMenu-active.js')}}"></script>
+
+     <!-- data table JS
+		============================================ -->
+    <script src="{{asset('kili_js/data-table/bootstrap-table.js')}}"></script>
+    <script src="{{ asset('kili_js/data-table/tableExport.js')}}"></script>
+    <script src="{{asset('kili_js/data-table/data-table-active.js')}}"></script>
+    <script src="{{ asset('kili_js/data-table/bootstrap-table-editable.js')}}"></script>
+    <script src="{{ asset('kili_js/data-table/bootstrap-editable.js')}}"></script>
+    <script src="{{ asset('kili_js/data-table/bootstrap-table-resizable.js')}}"></script>
+    <script src="{{ asset('js/data-table/colResizable-1.5.source.js')}}"></script>
+    <script src="{{ asset('kili_js/data-table/bootstrap-table-export.js')}}"></script>
 </body>
 
 </html>
