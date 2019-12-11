@@ -38,7 +38,7 @@ class MemberController extends Controller
            'id_no'=>'required|unique:members|digits:8',
        ]);
        if($validator->fails()){
-           return redirect()->back()->withErrors($validator)->withInput($request->input());
+        return redirect()->back()->withErrors($validator)->withInput($request->input());
        }else{
          
         $member->firstname=$request->firstname;
@@ -61,7 +61,7 @@ class MemberController extends Controller
 
     public function update()
     {
-
+     return view('studentlogin');
     }
     
     public function delete()
@@ -87,5 +87,9 @@ class MemberController extends Controller
             ->editColumn('id', 'ID: {{$id}}')
             ->removeColumn('gender')
             ->make(true);
+    }
+    
+    public function registerstudent(Request $request){
+       
     }
 }
